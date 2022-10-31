@@ -34,7 +34,7 @@ app.get("/links", checkTokenMiddleware, async (req, res) => {
     console.error(e);
     return res.status(401).send({
       status: "failed",
-      error: e,
+      error: e.toString(),
     });
   }
 });
@@ -58,7 +58,7 @@ app.post("/add-link", checkTokenMiddleware, async (req, res) => {
     console.error(e);
     return res.status(401).send({
       status: "failed",
-      error: e,
+      error: e.toString(),
     });
   }
 });
@@ -82,7 +82,7 @@ app.post("/remove-link", checkTokenMiddleware, async (req, res) => {
     console.error(e);
     return res.status(401).send({
       status: "failed",
-      error: e,
+      error: e.toString(),
     });
   }
 });
@@ -118,7 +118,7 @@ app.post("/login", async (req, res) => {
     console.error(e);
     return res.status(401).send({
       status: "failed",
-      error: e,
+      error: e.toString(),
     });
   }
 });
@@ -149,7 +149,7 @@ app.post("/register", async (req, res) => {
     console.error(e);
     return res.status(401).send({
       status: "failed",
-      error: e,
+      error: e.toString(),
     });
   }
 });
@@ -174,7 +174,7 @@ app.post("/delete-account", checkTokenMiddleware, async (req, res) => {
     console.error(e);
     return res.status(401).send({
       status: "failed",
-      error: e,
+      error: e.toString(),
     });
   }
 });
