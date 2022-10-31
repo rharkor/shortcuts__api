@@ -1,0 +1,52 @@
+@baseUrl = http://localhost:3001/
+
+GET {{baseUrl}}
+
+#### 
+
+POST {{baseUrl}}register
+Content-Type: application/json
+
+{
+    "email": "louis@huort.com",
+    "password": "test123"
+}
+
+####
+POST {{baseUrl}}login
+Content-Type: application/json
+
+{
+    "email": "louis@huort.com",
+    "password": "test123"
+}
+
+@auth = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiZW1haWwiOiJsb3Vpc0BodW9ydC5jb20iLCJpYXQiOjE2NjcxNjgyNDAsImV4cCI6MTY2ODAzMjI0MH0.6tId7YzYNk-UCcprDqmZl3x8oKZLg-C0vo6piI0aWeE
+
+####
+POST {{baseUrl}}delete-account
+Authorization: Bearer {{ auth }}
+
+####
+GET {{ baseUrl }}links
+Authorization: Bearer {{ auth }}
+
+
+####
+POST {{ baseUrl }}add-link
+Authorization: Bearer {{ auth }}
+Content-Type: application/json
+
+{
+    "description": "Google",
+    "url": "https://google.com"
+}
+
+####
+POST {{ baseUrl }}remove-link
+Authorization: Bearer {{ auth }}
+Content-Type: application/json
+
+{
+    "linkId": 3
+}
