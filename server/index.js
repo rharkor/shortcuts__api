@@ -1,10 +1,12 @@
 const express = require("express");
+const cors = require("cors");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 const { checkTokenMiddleware } = require("./middlewares/auth");
 const { connect, client } = require("./utils/database");
 const app = express();
 app.use(express.json());
+app.use(cors());
 const port = 3001;
 
 app.get("/", (req, res) => {

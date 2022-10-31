@@ -1,4 +1,5 @@
 @baseUrl = http://localhost:3001/
+@baseUrl = http://huort.com:10007/
 
 GET {{baseUrl}}
 
@@ -21,7 +22,9 @@ Content-Type: application/json
     "password": "test123"
 }
 
-@auth = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiZW1haWwiOiJsb3Vpc0BodW9ydC5jb20iLCJpYXQiOjE2NjcxNjgyNDAsImV4cCI6MTY2ODAzMjI0MH0.6tId7YzYNk-UCcprDqmZl3x8oKZLg-C0vo6piI0aWeE
+#### 
+
+@auth = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJsb3Vpc2h1b3J0LmNvbSIsImlhdCI6MTY2NzIyMTc4MSwiZXhwIjoxNjY4MDg1NzgxfQ.J8OY_UXKLpMOuc2E-k-Oz0XzdbgfA5PEDjk9RThvC6Y
 
 ####
 POST {{baseUrl}}delete-account
